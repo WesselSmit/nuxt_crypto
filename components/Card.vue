@@ -45,7 +45,7 @@
     height: 100%;
     padding: $space-sm;
     border: 1px solid $clr-gray;
-    border-radius: 10px;
+    border-radius: $border-radius;
 
     &:hover,
     &:focus {

@@ -3,7 +3,7 @@
     <h1>Coins</h1>
     <p>This is a list of all the crypto currencies in the API.</p>
 
-    <List :data="coins" :link-base="'/coin/'" />
+    <List :data="coins" :link-base="'/coins/'" />
   </main>
 </template>
 
