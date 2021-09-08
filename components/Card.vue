@@ -1,20 +1,54 @@
 <template>
   <article class="card">
-
+    <nuxt-img
+      :src="image"
+      :quality="80"
+      :width="50"
+      class="card__image"
+    />
+    <h2 class="card__title">{{ title }}</h2>
   </article>
 </template>
 
 <script>
 export default {
   props: {
-    emblem: {
+    image: {
       type: String,
-      default: null
+      required: true
+    },
+    title: {
+      type: String,
+      required: true
     }
   }
 }
 </script>
 
-<style>
+<style lang="scss">
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: $space-sm;
+    border: 1px solid $clr-gray;
+    border-radius: 10px;
 
+    &:hover,
+    &:focus {
+      border-color: $clr-accent;
+    }
+
+    &__image {
+      margin-bottom: $space-sm;
+    }
+
+    &__title {
+      font-weight: 400;
+      font-size: 12px;
+      text-align: center;
+      word-break: break-word;
+    }
+  }
 </style>

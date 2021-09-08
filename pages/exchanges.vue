@@ -1,6 +1,6 @@
 <template>
   <main class="exchanges">
-    <h1 class="exchanges__heading">Exchanges</h1>
+    <h1>Exchanges</h1>
 
     <ul class="exchanges__list">
       <li
@@ -8,11 +8,12 @@
         :key="exchange.id"
         class="exchanges__item"
       >
-        <nuxt-link to="">
-          <article class="exchanges__card">
-            <h3 class="exchanges__title">{{ exchange.name }}</h3>
-            <nuxt-img :src="exchange.image"></nuxt-img>
-          </article>
+        <nuxt-link :to="'/coin/' + exchange.id">
+          <Card
+            :image="exchange.image"
+            :title="exchange.name"
+            :body="exchange.description"
+          />
         </nuxt-link>
       </li>
     </ul>
@@ -31,5 +32,13 @@ export default {
 </script>
 
 <style lang="scss">
+.exchanges {
+  margin-bottom: $space-xl;
 
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-gap: $space-md;
+  }
+}
 </style>

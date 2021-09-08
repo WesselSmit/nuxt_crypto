@@ -23,7 +23,6 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@/assets/styles/reset.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -43,7 +42,9 @@ export default {
 
   styleResources: {
    scss: [
-    '@/assets/styles/variables.scss'
+    '@/assets/styles/reset.scss',
+    '@/assets/styles/variables.scss',
+    '@/assets/styles/base.scss'
    ],
    hoistUseStatements: true  // Hoists the "@use" imports. Applies only to "sass", "scss" and "less". Default: false.
   },
