@@ -1,6 +1,6 @@
 <template>
   <main class="coins">
-    <h1>Coins</h1>
+    <h1 class="coins__title">Coins</h1>
     <p>This is a list of all the crypto currencies in the API.</p>
 
     <List :data="coins" :link-base="'/coins/'" />

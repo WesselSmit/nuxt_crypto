@@ -12,7 +12,7 @@
         <button
           class="coin__button"
           @click="collapse"
-        >Show {{ collapsed ? 'More' : 'Less' }}</button>
+        >{{ collapseText }}</button>
       </div>
 
       <nuxt-img
@@ -36,6 +36,11 @@
     data() {
       return {
         collapsed: true
+      }
+    },
+    computed: {
+      collapseText() {
+        return 'Show' + this.collapsed ? 'More' : 'Less'
       }
     },
     methods: {
