@@ -25,7 +25,6 @@ export default {
   async asyncData() {
     const res = await fetch('https://api.coingecko.com/api/v3/exchanges')
     const data = await res.json()
-    console.log(data)
     return { exchanges: data }
   },
 }

@@ -43,7 +43,6 @@ export default {}
     &__link {
       color: $clr-text;
       text-transform: uppercase;
-      text-decoration: none;
 
       &:hover {
         color: $clr-accent;

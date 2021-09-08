@@ -1,12 +1,20 @@
 <template>
   <article class="card">
     <nuxt-img
+      v-if="image"
       :src="image"
       :quality="80"
       :width="50"
       class="card__image"
     />
+
     <h2 class="card__title">{{ title }}</h2>
+
+    <p
+      v-if="body"
+      class="card__body">
+      {{ body }}
+    </p>
   </article>
 </template>
 
@@ -15,11 +23,15 @@ export default {
   props: {
     image: {
       type: String,
-      required: true
+      default: null
     },
     title: {
       type: String,
       required: true
+    },
+    body: {
+      type: String,
+      default: null
     }
   }
 }
