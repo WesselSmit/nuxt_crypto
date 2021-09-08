@@ -1,5 +1,7 @@
 <template>
-  <Tutorial/>
+  <h1>Crypto Watch</h1>
+
+
 </template>
 
 <script>

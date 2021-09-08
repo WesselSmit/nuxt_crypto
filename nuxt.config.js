@@ -1,7 +1,12 @@
 export default {
+  target: 'static',
+  image: {
+    domains: ['https://assets.coingecko.com']
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nuxt_crypto',
+    title: 'Crypto Watch',
     htmlAttrs: {
       lang: 'en'
     },
@@ -18,6 +23,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '@/assets/styles/reset.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -31,7 +37,16 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    '@nuxt/image',
+    '@nuxtjs/style-resources',
   ],
+
+  styleResources: {
+   scss: [
+    '@/assets/styles/variables.scss'
+   ],
+   hoistUseStatements: true  // Hoists the "@use" imports. Applies only to "sass", "scss" and "less". Default: false.
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
