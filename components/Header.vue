@@ -1,6 +1,8 @@
 <template>
   <header class="header">
-    <nav>
+    <nav class="header__inner">
+      <h6 class="header__title">Crypto Watch</h6>
+
       <ul class="header__list">
         <li class="header__item">
           <nuxt-link :to="'/'" class="header__link">Home</nuxt-link>
@@ -16,20 +18,27 @@
   </header>
 </template>
 
-<script>
-export default {}
-</script>
-
 <style lang="scss">
   .header {
     margin-bottom: $space-xl;
     border-bottom: $border-normal;
 
-    &__list {
+    &__inner {
       display: flex;
-      justify-content: flex-end;
+      align-items: center;
+      justify-content: space-between;
       max-width: $site-width;
       margin: auto;
+    }
+
+    &__title {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
     }
 
     &__item {
@@ -42,7 +51,7 @@ export default {}
 
     &__link {
       color: $clr-text;
-      text-transform: uppercase;
+      line-height: .9;
 
       &:hover {
         color: $clr-accent;

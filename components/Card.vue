@@ -19,22 +19,22 @@
 </template>
 
 <script>
-export default {
-  props: {
-    image: {
-      type: String,
-      default: null
-    },
-    title: {
-      type: String,
-      required: true
-    },
-    body: {
-      type: String,
-      default: null
+  export default {
+    props: {
+      image: {
+        type: String,
+        default: null
+      },
+      title: {
+        type: String,
+        required: true
+      },
+      body: {
+        type: String,
+        default: null
+      }
     }
   }
-}
 </script>
 
 <style lang="scss">
