@@ -25,7 +25,6 @@
       return { exchange: data }
     },
     head() {
-      console.log(this.exchange)
       return {
         title: this.exchange.name,
         meta: [

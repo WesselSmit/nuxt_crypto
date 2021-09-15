@@ -20,9 +20,10 @@
 
 <style lang="scss">
   .header {
+    position: relative;
+    z-index: 100;
     margin-bottom: $space-xl;
     background-color: $clr-accent;
-    border-bottom: $border-normal;
 
     &__inner {
       display: flex;

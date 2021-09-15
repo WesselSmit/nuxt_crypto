@@ -1,11 +1,10 @@
-// todo seo, page transitions, ssr vs ssg
-
-
 export default {
   target: 'static',
   image: {
     domains: ['https://assets.coingecko.com']
   },
+
+  loading: false,
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -16,7 +15,6 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
@@ -47,7 +45,8 @@ export default {
    scss: [
     '@/assets/styles/reset.scss',
     '@/assets/styles/variables.scss',
-    '@/assets/styles/base.scss'
+    '@/assets/styles/base.scss',
+    '@/assets/styles/transitions.scss'
    ],
    hoistUseStatements: true  // Hoists the "@use" imports. Applies only to "sass", "scss" and "less". Default: false.
   },
