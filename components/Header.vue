@@ -1,17 +1,17 @@
 <template>
   <header class="header">
     <nav class="header__inner">
-      <h6 class="header__title">Crypto Watch</h6>
+      <nuxt-link to="/" class="header__logo">Crypto Watch</nuxt-link>
 
       <ul class="header__list">
         <li class="header__item">
-          <nuxt-link :to="'/'" class="header__link">Home</nuxt-link>
+          <nuxt-link to="/" class="header__link">Home</nuxt-link>
         </li>
         <li class="header__item">
-          <nuxt-link :to="'/exchanges'" class="header__link">Exchanges</nuxt-link>
+          <nuxt-link to="/exchanges" class="header__link">Exchanges</nuxt-link>
         </li>
         <li class="header__item">
-          <nuxt-link :to="'/coins'" class="header__link">Coins</nuxt-link>
+          <nuxt-link to="/coins" class="header__link">Coins</nuxt-link>
         </li>
       </ul>
     </nav>
@@ -21,6 +21,7 @@
 <style lang="scss">
   .header {
     margin-bottom: $space-xl;
+    background-color: $clr-accent;
     border-bottom: $border-normal;
 
     &__inner {
@@ -31,9 +32,16 @@
       margin: auto;
     }
 
-    &__title {
+    &__logo {
       margin: 0;
       font-size: 28px;
+      color: $clr-text;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: $clr-white;
+      }
     }
 
     &__list {
@@ -54,7 +62,7 @@
       line-height: .9;
 
       &:hover {
-        color: $clr-accent;
+        color: $clr-white;
       }
     }
   }
