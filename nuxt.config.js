@@ -1,3 +1,6 @@
+// todo seo, page transitions, ssr vs ssg
+
+
 export default {
   target: 'static',
   image: {
@@ -6,7 +9,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Crypto Watch',
+    titleTemplate: '%s - Crypto watch',
     htmlAttrs: {
       lang: 'en'
     },

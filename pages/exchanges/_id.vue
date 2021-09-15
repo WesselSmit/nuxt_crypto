@@ -19,10 +19,23 @@
       const data = await res.json()
 
       if (data?.error) {
-        redirect('/coins')
+        redirect('/exchanges')
       }
 
       return { exchange: data }
+    },
+    head() {
+      console.log(this.exchange)
+      return {
+        title: this.exchange.name,
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.exchange.description
+          }
+        ]
+      }
     }
   }
 </script>

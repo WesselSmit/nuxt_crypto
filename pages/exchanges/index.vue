@@ -14,6 +14,18 @@
       const data = await res.json()
       return { exchanges: data }
     },
+    head() {
+      return {
+        title: 'Exchanges',
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'Crypto watch has data about most crypto currency exchanges.'
+          }
+        ]
+      }
+    },
   }
 </script>
 

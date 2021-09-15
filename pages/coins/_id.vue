@@ -43,6 +43,18 @@
         collapsed: true
       }
     },
+    head() {
+      return {
+        title: this.coin.name,
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.coin.description.en
+          }
+        ]
+      }
+    },
     computed: {
       collapseText() {
         return 'Show' + this.collapsed ? 'More' : 'Less'

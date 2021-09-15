@@ -9,7 +9,20 @@
 </template>
 
 <script>
-  export default {}
+  export default {
+    head() {
+      return {
+        title: 'Home',
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'Crypto watch is an experiment to try out Nuxt.js.'
+          }
+        ]
+      }
+    }
+  }
 </script>
 
 <style lang="scss">
