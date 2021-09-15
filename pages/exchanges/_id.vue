@@ -14,11 +14,16 @@
 
 <script>
   export default {
-    async asyncData({ params: { id } }) {
+    async asyncData({ params: { id }, redirect }) {
       const res = await fetch('https://api.coingecko.com/api/v3/exchanges/' + id)
       const data = await res.json()
+
+      if (data?.error) {
+        redirect('/coins')
+      }
+
       return { exchange: data }
-    },
+    }
   }
 </script>
 
